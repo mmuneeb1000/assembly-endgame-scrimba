@@ -50,7 +50,7 @@ function App() {
       {isGameWon && <Confetti recycle={false} numberOfPieces={1000} />}
       <main
         className="flex flex-col justify-center items-center 
-        mx-auto p-6 w-150 h-180 bg-app-bg gap-10"
+        mx-auto p-6 w-120 h-180 bg-app-bg gap-10"
       >
         <Header
           isGameWon={isGameWon}

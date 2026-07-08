@@ -11,11 +11,11 @@ function Result({
   return (
     <>
       {!isGameOver && !isLastGuessIncorrect && (
-        <section className="flex w-88 h-15 text-center text-body"></section>
+        <section className="flex w-85 h-15 text-center text-body"></section>
       )}
       {isGameWon && (
         <section
-          className="flex flex-col w-88 h-15 justify-center 
+          className="flex flex-col w-85 h-15 justify-center 
          rounded bg-win text-center text-white"
         >
           <h2 className="text-lg">You Win! </h2>
@@ -25,7 +25,7 @@ function Result({
 
       {isGameLost && (
         <section
-          className="flex flex-col w-88 h-15 justify-center
+          className="flex flex-col w-85 h-15 justify-center
         rounded bg-lose text-center text-white"
         >
           <h2 className="text-lg">Game Over!</h2>
@@ -34,7 +34,7 @@ function Result({
       )}
       {!isGameOver && isLastGuessIncorrect && (
         <section
-          className="flex flex-col w-88 h-15 justify-center
+          className="flex flex-col w-85 h-15 justify-center
         rounded bg-farewell text-center text-white"
         >
           <p> {getFarewellText(languages[notMatchCount - 1].name)}</p>

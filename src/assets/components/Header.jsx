@@ -9,7 +9,7 @@ function Header({
   notMatchCount,
 }) {
   return (
-    <header className="flex flex-col w-88 gap-5">
+    <header className="flex flex-col w-85 gap-5">
       <div>
         <h1 className="text-xl text-center text-heading">Assembly: Endgame</h1>
         <p className="text-base text-center text-body">

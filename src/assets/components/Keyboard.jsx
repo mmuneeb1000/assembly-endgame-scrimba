@@ -8,7 +8,7 @@ function Keyboard({
 }) {
   return (
     <section className="flex flex-col gap-10">
-      <div className="flex flex-wrap justify-center w-88 gap-2 ">
+      <div className="flex flex-wrap justify-center w-85 gap-2 ">
         {alphabet.map((letter) => {
           const isGuessed = matchLetter.includes(letter);
           const isCorrect = isGuessed && guessWord.includes(letter);
