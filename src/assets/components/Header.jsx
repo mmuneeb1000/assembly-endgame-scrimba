@@ -11,8 +11,8 @@ function Header({
   return (
     <header className="flex flex-col w-88 gap-5">
       <div>
-        <h1 className="text-lg text-center text-heading">Assembly: Endgame</h1>
-        <p className="text-sm text-center text-body">
+        <h1 className="text-xl text-center text-heading">Assembly: Endgame</h1>
+        <p className="text-base text-center text-body">
           Guess the word in under 8 attempts to keep the programming world safe
           from Assembly!
         </p>
