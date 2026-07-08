@@ -4,7 +4,7 @@ A word guessing game inspired by Hangman, built with React and Tailwind CSS as p
 
 ## Preview
 
-![Assembly Endgame Screenshot](./public/preview.png)
+![Assembly Endgame Screenshot](./public/assembly-endgame-preview.png)
 
 ## Features
 
