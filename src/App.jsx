@@ -4,7 +4,7 @@ import Header from "./assets/components/Header";
 import Elimination from "./assets/components/Elimination";
 import Keyboard from "./assets/components/Keyboard";
 import Match from "./assets/components/Match";
-
+import Confetti from "react-confetti";
 function App() {
   const languages = [
     { name: "HTML", color: "#E2680F", text: "#F9F4DA" },
@@ -47,6 +47,7 @@ function App() {
 
   return (
     <>
+      {isGameWon && <Confetti recycle={false} numberOfPieces={1000} />}
       <main
         className="flex flex-col justify-center items-center 
         mx-auto p-6 w-150 h-180 bg-app-bg gap-10"
@@ -60,7 +61,11 @@ function App() {
           notMatchCount={notMatchCount}
         />
         <Elimination languages={languages} notMatchCount={notMatchCount} />
-        <Match guessWord={guessWord} matchLetter={matchLetter} />
+        <Match
+          guessWord={guessWord}
+          matchLetter={matchLetter}
+          isGameLost={isGameLost}
+        />
         <section className="sr-only" aria-live="polite" role="status">
           <p>
             {guessWord.includes(lastGuessedLetter)
