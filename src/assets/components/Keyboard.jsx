@@ -41,7 +41,7 @@ function Keyboard({
       {isGameOver && (
         <button
           onClick={startNewGame}
-          className="bg-game w-50 rounded mx-auto text-black text-sm border-body border px-4 py-2 cursor-pointer "
+          className="bg-game w-50 rounded mx-auto text-black text-base border-body border px-4 py-2 cursor-pointer "
         >
           New Game
         </button>
