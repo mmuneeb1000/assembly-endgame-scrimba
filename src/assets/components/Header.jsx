@@ -1,14 +1,32 @@
 import Result from "./Result";
 
-function Header() {
+function Header({
+  isGameWon,
+  isGameLost,
+  isGameOver,
+  isLastGuessIncorrect,
+  languages,
+  notMatchCount,
+}) {
   return (
-    <header className="w-88">
-      <h1 className="text-lg text-center">Assembly: Endgame</h1>
-      <p className="text-sm text-center">
-        Guess the word in under 8 attempts to keep the programming world safe
-        from Assembly!
-      </p>
-      <Result />
+    <header className="flex flex-col w-88 gap-5">
+      <div>
+        <h1 className="text-lg text-center text-heading">Assembly: Endgame</h1>
+        <p className="text-sm text-center text-body">
+          Guess the word in under 8 attempts to keep the programming world safe
+          from Assembly!
+        </p>
+      </div>
+      <Result
+        isGameWon={isGameWon}
+        isGameLost={isGameLost}
+        isGameOver={isGameOver}
+        isLastGuessIncorrect={isLastGuessIncorrect}
+        languages={languages}
+        notMatchCount={notMatchCount}
+        aria-live="polite"
+        role="status"
+      />
     </header>
   );
 }

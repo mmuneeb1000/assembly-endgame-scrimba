@@ -1,13 +1,18 @@
-function Match() {
+import { useState } from "react";
+
+function Match({ guessWord, matchLetter }) {
   return (
-    <div className="flex gap-1">
-      {Array.from({ length: 5 }).map((_, index) => (
+    <section className="flex gap-1">
+      {guessWord.split("").map((letter, index) => (
         <div
           key={index}
-          className="w-10 h-10 bg-[#323232] border-b-2 border-gray-300"
-        />
+          className="w-10 h-10 bg-[#323232] border-b-2 border-gray-300 flex items-center justify-center text-xl font-semibold uppercase"
+        >
+          {matchLetter.includes(letter) ? letter : ""}
+        </div>
       ))}
-    </div>
+    </section>
   );
 }
+
 export default Match;

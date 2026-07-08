@@ -1,28 +1,26 @@
-function Elimination() {
-  const languages = [
-    { name: "HTML", color: "#E2680F", text: "#F9F4DA" },
-    { name: "CSS", color: "#328AF1", text: "#F9F4DA" },
-    { name: "JavaScript", color: "#F4EB13", text: "#1E1E1E" },
-    { name: "React", color: "#2ED3E9", text: "#1E1E1E" },
-    { name: "TypeScript", color: "#298EC6", text: "#F9F4DA" },
-    { name: "Node.js", color: "#599137", text: "#F9F4DA" },
-    { name: "Python", color: "#FFD742", text: "#1E1E1E" },
-    { name: "Ruby", color: "#D02B2B", text: "#F9F4DA" },
-    { name: "Assembly", color: "#2D519F", text: "#F9F4DA" },
-  ];
+function Elimination({ languages, notMatchCount }) {
   return (
-    <div className="flex flex-wrap justify-center gap-1 max-w-sm">
-      {languages.map((language) => (
-        <span
-          className="rounded px-2 py-1 text-sm cursor-pointer font-semibold"
-          style={{
-            backgroundColor: language.color,
-            color: language.text,
-          }}
-        >
-          {language.name}
-        </span>
-      ))}
+    <div className="flex flex-wrap justify-center gap-1 max-w-88">
+      {languages.map((language, index) => {
+        const isLanguageLost = index < notMatchCount;
+        return (
+          <span
+            key={language.name}
+            className="relative rounded px-2 py-1 text-sm cursor-pointer font-semibold"
+            style={{
+              backgroundColor: language.color,
+              color: language.text,
+            }}
+          >
+            {language.name}
+            {isLanguageLost && (
+              <span className="absolute inset-0 flex items-center justify-center bg-black/70 rounded">
+                💀
+              </span>
+            )}
+          </span>
+        );
+      })}
     </div>
   );
 }

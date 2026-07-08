@@ -1,15 +1,34 @@
 @import "tailwindcss";
 @theme {
   --color-background: #1e1e1e;
+  --color-white: #ffffff;
+  --color-win: #10a95b;
+  --color-lose: #ba2a2a;
+  --color-farewell: #7a5ea7;
   --color-app-bg: #282726;
   --color-keyboard: #fcba29;
+  --color-heading: #f9f4da;
+  --color-body: #8e8e8e;
+  --color-game: #11b5e5;
 }
 
 body {
+  font-family: "Hanken Grotesk", sans-serif;
   background-color: #1e1e1e;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
