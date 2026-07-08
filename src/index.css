@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@theme {
+  --color-background: #1e1e1e;
+  --color-app-bg: #282726;
+  --color-keyboard: #fcba29;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

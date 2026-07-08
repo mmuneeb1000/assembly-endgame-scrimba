@@ -6,7 +6,10 @@ import Match from "./assets/components/Match";
 function App() {
   return (
     <>
-      <main className="w-100">
+      <main
+        className="flex flex-col justify-center items-center 
+        mx-auto p-6 w-150 bg-app-bg gap-10"
+      >
         <Header />
         <Elimination />
         <Match />
